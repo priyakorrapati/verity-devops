@@ -80,7 +80,7 @@ public class ExpenseControllerTest {
 
 		ResultActions resultAction = mockMvc.perform(get("/expense-list")).andExpect(status().isOk())
 				.andExpect(view().name("expenseList.jsp")).andExpect(forwardedUrl("expenseList.jsp"))
-				.andExpect(model().attribute("expeseList", Matchers.hasSize(2)));
+				.andExpect(model().attribute("expeseList", Matchers.hasSize(1)));
 		log.info("Positive result action : " + resultAction);
 	}
 
